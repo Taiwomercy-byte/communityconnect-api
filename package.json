@@ -1,0 +1,27 @@
+{
+  "name": "communityconnect-api",
+  "version": "1.0.0",
+  "description": "This project focuses on building a REST API for a simplified social media or community platform called \"CommunityConnect\". Key features include user profiles, posts/threads, comments, following/followers, likes/reactions, and basic feed generation. This project emphasizes relationships between data and social interactions.",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Taiwomercy-byte/communityconnect-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Taiwomercy-byte/communityconnect-api/issues"
+  },
+  "homepage": "https://github.com/Taiwomercy-byte/communityconnect-api#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {}
+}
