@@ -1,24 +1,19 @@
-import 'dotenv/config';
-import express from 'express';
+import app from './app.js';
 import sequelize from './config/database.js';
+import { env } from './config/env.js';
 
-const app = express();
-
-app.get('/', (req, res ) => {
-  res.send('Hello World!');
-});
-
-app.listen(3000, () => {
-  console.log('Server running on port 3000');
-});
-
-async function connectDatabase() {
+async function start() {
   try {
     await sequelize.authenticate();
-    console.log('Connection has been established successfully.');
+    console.log('Database connection established.');
+
+    app.listen(env.port, () => {
+      console.log(`Server running on port ${env.port} (${env.nodeEnv})`);
+    });
   } catch (error) {
-    console.error('Unable to connect to the database:', error);
+    console.error('Unable to start the server:', error);
+    process.exit(1);
   }
 }
 
-connectDatabase();
+start();
